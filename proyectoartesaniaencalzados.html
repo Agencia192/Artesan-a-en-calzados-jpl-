@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Sistema de Ventas - JPL</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> 
+    <header> 
+        <h1>JPL</h1> 
+    </header> 
+ 
+    <nav> 
+        <ul> 
+            <li><a href="#venta">Registrar Venta</a></li> 
+            <li><a href="#factura">Generar Factura</a></li> 
+            <li><a href="#historial">Historial de Ventas</a></li> 
+        </ul> 
+    </nav> 
+ 
+    <section id="venta"> 
+        <h2>Registrar Venta</h2> 
+        <div class="product-grid"> 
+            <div class="product-card"> 
+                <img src="20241021_211106.jpg" alt="Producto 1"> 
+                <p>Calzado de Hombre</p> 
+                <p>$20.00</p> 
+            </div> 
+            <div class="product-card"> 
+                <img src="20241021_211052.jpg" alt="Producto 2"> 
+                <p>Calzado de Mujer</p> 
+                <p>$30.00</p> 
+            </div> 
+            <div class="product-card"> 
+                <img src="20241021_211118.jpg" alt="Producto 3"> 
+                <p>Calzado para fiesta</p> 
+                <p>$50.00</p> 
+            </div> 
+        </div> 
+        <form id="formVenta"> 
+            <label for="producto">Producto:</label> 
+            <input type="text" id="producto" required> 
+ 
+            <label for="cantidad">Cantidad:</label> 
+            <input type="number" id="cantidad" required> 
+ 
+            <label for="precio">Precio Unitario:</label> 
+            <input type="number" id="precio" required> 
+ 
+            <button type="submit">Agregar Venta</button> 
+        </form> 
+    </section> 
+ 
+    <section id="factura"> 
+        <h2>Generar Factura</h2> 
+        <button id="generarFactura">Generar Factura</button> 
+        <div id="facturaDetalle"></div> 
+    </section> 
+ 
+    <section id="historial"> 
+        <h2>Historial de Ventas</h2> 
+        <div id="historialVentas"></div> 
+    </section> 
+ 
+    <footer> 
+        <p>&copy; 2024 Artesania en calzados</p> 
+    </footer> 
+ 
+    <script src="script.js"></script> 
+    <script src="database.js"></script> 
+</body> 
+</html> 

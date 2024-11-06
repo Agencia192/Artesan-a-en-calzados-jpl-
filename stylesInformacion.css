@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('img/fondo.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+/* Estilos para los títulos */
+h1, h2 {
+    text-align: center;
+    color: darkblue;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada sección */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Estilos para las imágenes redondas con animación */
+.image-circle {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+    border: 4px solid darkblue;
+}
+
+/* Efecto de animación al pasar el mouse sobre la imagen */
+.image-circle:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+/* Animación para cada sección */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para que el fondo sea responsivo */
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
+}
